@@ -107,11 +107,7 @@ PRODUCT_PACKAGES += \
     meta_init.rc \
     meta_init.vendor.rc \
     multi_init.rc \
-    fstab.emmc \
-    fstab.enableswap \
-    fstab.mt6877 \
-    ueventd.mtk.rc \
-
+    ueventd.oplus.rc
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
