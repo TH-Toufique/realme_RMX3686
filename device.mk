@@ -72,67 +72,9 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.2.vendor \
     android.hardware.drm@1.3.vendor
 
-# Display
+# fastbootd
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@2.0.vendor \
-    android.hardware.graphics.allocator@3.0.vendor \
-    android.hardware.graphics.allocator@4.0.vendor \
-    android.hardware.graphics.composer@2.2-service \
-    android.hardware.memtrack@1.0-service \
-    android.hardware.memtrack@1.0-impl \
-    libdrm.vendor \
-    libdrm
-
-# DRM
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.clearkey
-
-# Dynamic Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-PRODUCT_BUILD_SUPER_PARTITION := false
-
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-service \
-    android.hardware.gatekeeper@1.0-impl
-
-# GNSS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss.measurement_corrections@1.0.vendor \
-    android.hardware.gnss.measurement_corrections@1.1.vendor \
-    android.hardware.gnss.visibility_control@1.0.vendor \
-    android.hardware.gnss@1.0.vendor \
-    android.hardware.gnss@1.1.vendor \
-    android.hardware.gnss@2.0.vendor \
-    android.hardware.gnss@2.1.vendor \
-    android.hardware.gnss-V1-ndk_platform.vendor
-
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.0 \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service
-
-# HIDL
-PRODUCT_PACKAGES += \
-    libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor
-
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.0.vendor \
-    libkeymaster4.vendor:64 \
-    libkeymaster4support.vendor:64 \
-    libsoft_attestation_cert.vendor:64 \
-    libkeystore-wifi-hidl \
-    libkeystore-engine-wifi-hidl
-
-# KPOC
-PRODUCT_PACKAGES += \
-    libsuspend
+    fastbootd
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
