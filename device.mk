@@ -200,6 +200,9 @@ PRODUCT_PACKAGES += \
     meta_init.vendor.rc \
     multi_init.rc \
     ueventd.oplus.rc
+    
+PRODUCT_PACKAGES += \
+    init.recovery.mt6877.rc
 
 # Sensors
 PRODUCT_PACKAGES += \
