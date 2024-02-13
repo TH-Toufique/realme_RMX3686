@@ -37,6 +37,9 @@ PRODUCT_PACKAGES += \
     libdynproc \
     libhapticgenerator
 
+PRODUCT_PACKAGES += \
+    MtkInCallService
+    
 # Biometrics
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.oplus
