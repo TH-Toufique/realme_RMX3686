@@ -9,6 +9,7 @@ LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),RMX3686)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
+$(call add-radio-file,dynamic-remove-oplus)
 
 VENDOR_SYMLINKS := \
     $(TARGET_OUT_VENDOR)/lib \
