@@ -49,6 +49,25 @@ while [ "${#}" -gt 0 ]; do
     shift
 done
 
+function blob_fixup {
+    case "$1" in
+        vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so)
+            grep -q "libcamera_metadata_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcamera_metadata_shim.so" "${2}"
+            ;;
+        vendor/lib*/hw/vendor.mediatek.hardware.pq@2.13-impl.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            ;;
+        vendor/lib*/libmtkcam_stdutils.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "$2"
+            ;;
+        vendor/lib64/libmtkcam_featurepolicy.so)
+            # evaluateCaptureConfiguration()
+            xxd -p "${2}" | sed "s/90b0034e88740b9/90b003428028052/g" | xxd -r -p > "${2}".patched
+            mv "${2}".patched "${2}"
+            ;;
+    esac
+}
+
 if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
