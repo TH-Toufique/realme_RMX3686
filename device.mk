@@ -83,6 +83,15 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0.vendor \
+    libkeymaster4.vendor:64 \
+    libkeymaster4support.vendor:64 \
+    libsoft_attestation_cert.vendor:64 \
+    libkeystore-wifi-hidl \
+    libkeystore-engine-wifi-hidl
+
 # Media
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.1.vendor \
