@@ -8,6 +8,7 @@ DEVICE_PATH := device/realme/RMX3686
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
+BUILD_BROKEN_DUP_RULES := true
 
 # Architecture
 TARGET_ARCH := arm64
