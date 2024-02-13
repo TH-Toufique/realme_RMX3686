@@ -150,6 +150,30 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0.vendor \
+    libkeymaster4.vendor:64 \
+    libkeymaster4support.vendor:64 \
+    libsoft_attestation_cert.vendor:64 \
+    libkeystore-wifi-hidl \
+    libkeystore-engine-wifi-hidl
+
+# IMS
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common \
+    oplus-framework \
+    oplus-framework-telephony
+    
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.RMX3686
