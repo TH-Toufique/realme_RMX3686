@@ -367,7 +367,11 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek \
     hardware/oplus
-
+    
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.oplus
+    
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0.vendor \
