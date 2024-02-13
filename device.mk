@@ -177,21 +177,16 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
 
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.RMX3686
-
+    
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
-
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
@@ -297,6 +292,27 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+# Rootdir
+PRODUCT_PACKAGES += \
+    fstab.mt6877 \
+    fstab.mt6877_ramdisk \
+    init.cgroup.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6877.rc \
+    init.mt6877.usb.rc \
+    init.nfc_detect.rc \
+    init.project.rc \
+    init.sensor_1_0.rc \
+    init.target.rc \
+    ueventd.mtk.rc \
+    ueventd.oplus.rc \
+    nfc_detect.sh
+
+# Fastboot
+PRODUCT_PACKAGES += \
+    init.recovery.mt6877.rc
+    
 # Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.0.vendor \
@@ -317,30 +333,22 @@ PRODUCT_PACKAGES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    factory_init.connectivity.common.rc \
-    factory_init.connectivity.rc \
-    factory_init.project.rc \
-    factory_init.rc \
-    init.aee.rc \
-    init.ago.rc \
+    fstab.mt6877 \
+    fstab.mt6877_ramdisk \
     init.cgroup.rc \
-    init.connectivity.common.rc \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6877.rc \
     init.mt6877.usb.rc \
+    init.nfc_detect.rc \
     init.project.rc \
-    init.sensor_2_0.rc \
-    init_conninfra.rc \
-    meta_init.connectivity.common.rc \
-    meta_init.connectivity.rc \
-    meta_init.modem.rc \
-    meta_init.project.rc \
-    meta_init.rc \
-    meta_init.vendor.rc \
-    multi_init.rc \
-    ueventd.oplus.rc
-    
+    init.sensor_1_0.rc \
+    init.target.rc \
+    ueventd.mtk.rc \
+    ueventd.oplus.rc \
+    nfc_detect.sh
+
+# Fastboot
 PRODUCT_PACKAGES += \
     init.recovery.mt6877.rc
 
@@ -371,10 +379,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek \
     hardware/oplus
-    
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oplus
     
 # Thermal
 PRODUCT_PACKAGES += \
