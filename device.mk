@@ -34,6 +34,10 @@ PRODUCT_PACKAGES += \
     libdynproc \
     libhapticgenerator
 
+# Biometrics
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.3-service.oplus
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
