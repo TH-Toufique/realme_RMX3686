@@ -83,6 +83,35 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    factory_init.connectivity.common.rc \
+    factory_init.connectivity.rc \
+    factory_init.project.rc \
+    factory_init.rc \
+    init.aee.rc \
+    init.ago.rc \
+    init.cgroup.rc \
+    init.connectivity.common.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6877.rc \
+    init.mt6877.usb.rc \
+    init.project.rc \
+    init.sensor_2_0.rc \
+    init_conninfra.rc \
+    meta_init.connectivity.common.rc \
+    meta_init.connectivity.rc \
+    meta_init.modem.rc \
+    meta_init.project.rc \
+    meta_init.rc \
+    meta_init.vendor.rc \
+    multi_init.rc \
+    fstab.emmc \
+    fstab.enableswap \
+    fstab.mt6877 \
+    ueventd.mtk.rc \
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
