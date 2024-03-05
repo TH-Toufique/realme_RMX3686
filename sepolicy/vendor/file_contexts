@@ -11,13 +11,13 @@
 /dev/oplus_display                                                                                                     u:object_r:oplus_display_device:s0
 
 # Light
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light-service\.nashc                                                 u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light-service\.RMX3686                                                 u:object_r:hal_light_default_exec:s0
 
 # LiveDisplay
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service-nashc                                         u:object_r:hal_lineage_livedisplay_nashc_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service-RMX3686                                            u:object_r:hal_lineage_livedisplay_RMX3686_exec:s0
 
 # Sensors
-/(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@2\.0-service-multihal\.nashc                                 u:object_r:mtk_hal_sensors_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@2\.0-service-multihal\.RMX3686                               u:object_r:mtk_hal_sensors_exec:s0
 /(odm|vendor/odm)/bin/hw/vendor\.oplus\.hardware\.oplusSensor@1\.0-service                                             u:object_r:mtk_hal_sensors_exec:s0
 /dev/m_virtual_sensor_misc                                                                                             u:object_r:virtual_sensor_device:s0
 /dev/socket/als_correction                                                                                             u:object_r:als_correction_socket:s0
