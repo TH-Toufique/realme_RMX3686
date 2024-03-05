@@ -423,4 +423,4 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service-lazy
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/realme/RMX3686/RMX3686-vendor.mk)
+#$(call inherit-product, vendor/realme/RMX3686/RMX3686-vendor.mk)
