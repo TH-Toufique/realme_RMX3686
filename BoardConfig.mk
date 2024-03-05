@@ -6,6 +6,20 @@
 
 DEVICE_PATH := device/realme/RMX3686
 
+# A/B
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS := \
+	boot \
+	dtbo \
+	odm \
+	product \
+	system \
+	system_ext \
+	vendor \
+	vbmeta \
+	vbmeta_system \
+	vbmeta_vendor
+
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_PREBUILT_ELF_FILES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
