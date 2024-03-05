@@ -100,7 +100,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.ivan
+    android.hardware.light-service.RMX3686
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
