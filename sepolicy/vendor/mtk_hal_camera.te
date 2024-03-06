@@ -1,4 +1,4 @@
-add_hwservice(mtk_hal_camera, hal_camera_oplus_hwservice)
+#add_hwservice(mtk_hal_camera, hal_camera_oplus_hwservice)
 
 allow mtk_hal_camera persist_camera_file:dir rw_dir_perms;
 allow mtk_hal_camera persist_camera_file:file create_file_perms;
@@ -12,4 +12,4 @@ r_dir_file(mtk_hal_camera, vendor_proc_oplus_version)
 
 set_prop(mtk_hal_camera, vendor_oplus_prop)
 get_prop(mtk_hal_camera, vendor_oplus_prop)
-get_prop(mtk_hal_camera, system_oplus_camera_prop)
+#get_prop(mtk_hal_camera, system_oplus_camera_prop)
